@@ -51,3 +51,10 @@ export function maiorNumero(n){
     }
     return maior;
 }
+
+export function ingresso (quantidadeI, quantidadeM, DiaSemana, Nacionalidade){
+    let meia = 28.5 / 2;
+    let inteira = 28.5;
+    let total = 0;
+    if(DiaSemana == "Quarta" && )
+}
