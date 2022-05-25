@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { dobro, soma, tabuada, media, temperatura, corPrinmaria, maiorNumero, ingresso} from './service.js'
+import { dobro, soma, tabuada, media, temperatura, corPrinmaria, maiorNumero, ingresso, FreqCaracter} from './service.js'
 
 const server = Router();
 
@@ -153,6 +153,24 @@ server.post('/ingresso', (req,resp) => {
     resp.send({
         Total:x
     })
+})
+server.get('/dia2/freqcaracter/:texto/:caracter', (req, resp) => {
+    try {
+        const a = req.params.texto;
+        const b = req.params.caracter;
+
+        const x = FreqCaracter(a, b);
+
+        resp.send({
+            Freq: x
+        })
+    }
+
+    catch (err) {
+        resp.send({
+            err:err.message
+        })
+    }
 })
 
 export default server;

@@ -69,6 +69,15 @@ export function ingresso (quantidadeI, quantidadeM, DiaSemana, Nacionalidade){
     return total;
 }
 
-export function qtdCaracter(txt){
-    
+export function FreqCaracter (texto, caracter){
+
+    let a = 0;
+
+    for(let i = 0; i < texto.length; i++){
+        if (texto.charAt(i) == caracter) {
+            a++
+        }
+    }
+
+    return a;
 }
