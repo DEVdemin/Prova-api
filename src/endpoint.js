@@ -108,7 +108,7 @@ catch(err){
 })
 
 
-server.get('/corprimaria/:cor', (req, resp) => {
+server.get('/dia2/corprimaria/:cor', (req, resp) => {
     try{ 
     let a = req.params.cor;
 
