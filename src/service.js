@@ -55,6 +55,20 @@ export function maiorNumero(n){
 export function ingresso (quantidadeI, quantidadeM, DiaSemana, Nacionalidade){
     let meia = 28.5 / 2;
     let inteira = 28.5;
+    let soma = quantidadeI+quantidadeM;
     let total = 0;
-    if(DiaSemana == "Quarta" && )
+    if(DiaSemana == "quarta" && Nacionalidade == "Brasileira" ){
+        total = soma*5
+    }
+    else if(DiaSemana == "quarta"){
+        total = meia * soma
+    }
+    else{
+        total = (quantidadeI*inteira)+(quantidadeM*meia)
+    }
+    return total;
+}
+
+export function qtdCaracter(txt){
+    
 }
